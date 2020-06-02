@@ -1,3 +1,3 @@
 #!/bin/bash -x
 
-echo "Welcome to Employee wage Computation..!!!"
+echo "Welcome to Employee Wage Computation..!!!"
