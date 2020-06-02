@@ -1,4 +1,5 @@
 #!/bin/bash 
+echo "Program to store Day and Daily wage of an Employee along with Total wage..!!"
 
 full_time_hour=9
 part_time_hour=8
