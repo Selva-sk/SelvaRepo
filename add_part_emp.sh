@@ -5,7 +5,6 @@ part_time_hour=8
 wage_per_hour=20
 total_hours=0
 total_days=0
-
 i=0
 
 function getHours(){
@@ -19,6 +18,8 @@ case $type in
       while [[ $total_hours -lt 100 && $total_days -lt 20 ]]
 		do
       wage=$(($full_time_hour * $wage_per_hour))
+		Daily_wage[$i]=$wage
+		echo "Day $i Wage :" $wage
 		monthly_wage=$(($monthly_wage+$wage))
 		total_hours=$((total_hours+9))
 		((total_days++))
@@ -32,6 +33,8 @@ case $type in
       while [[ $total_hours -lt 100 && $total_days -lt 20 ]]
       do
       wage=$(($part_time_hour * $wage_per_hour))
+		Daily_wage[$i]=$wage
+      echo "Day $i Wage :" $wage
 		monthly_wage=$(($monthly_wage+$wage))
       total_hours=$((total_hours+8))
       ((total_days++))
