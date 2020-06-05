@@ -14,3 +14,5 @@ echo $exp2
 
 awk "BEGIN {printf (($c+$a/$b))}"
 
+awk "BEGIN {printf (($a%$b+$c))}"
+
