@@ -20,3 +20,10 @@ values[3]=`awk "BEGIN {printf (($c+$a/$b))}"`
 values[4]=`awk "BEGIN {printf (($a%$b+$c))}"`
 
 echo "Values are :" ${values[@]}
+
+for((i=1;i<=4;i++))
+do
+Array[$i]=`echo ${values[$i]}`
+done
+
+echo "Array values :" ${Array[@]}
