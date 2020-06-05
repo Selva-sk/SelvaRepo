@@ -7,3 +7,7 @@ read -p "Enter value 3:" c
 exp1=$(($b*$c))
 exp1=$(($exp1+$a))
 echo $exp1
+
+exp2=$(($a*$b))
+exp2=$(($exp2+$c))
+echo $exp2
