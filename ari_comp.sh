@@ -11,3 +11,6 @@ echo $exp1
 exp2=$(($a*$b))
 exp2=$(($exp2+$c))
 echo $exp2
+
+awk "BEGIN {printf (($c+$a/$b))}"
+
