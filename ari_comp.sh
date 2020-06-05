@@ -28,6 +28,8 @@ done
 
 echo "Array values :" ${Array[@]}
 
-sorted=$(printf "%s\n" "${Array[@]}" | sort -n )
+ascending=$(printf "%s\n" "${Array[@]}" | sort -n )
+descending=$(printf "%s\n" "${Array[@]}" | sort -n -r )
 
-echo "Ascending Order :" $sorted
+echo "Ascending Order :" $ascending
+echo "Descending Order :" $descending
