@@ -1,12 +1,11 @@
 #!/bin/bash 
 
 echo "!!!!...Coin Simulator...!!!!"
-read -p "Enter no of times to flip:" no
 
 Heads=0
 Tails=0
 
-for((i=0; i<no; i++))
+for((i=0; $Heads<21 && $Tails<21; i++))
 do
 	rand=$(( (RANDOM % 2 ) + 1 ))
 if [ $rand -eq 1 ]
