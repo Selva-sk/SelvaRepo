@@ -27,3 +27,7 @@ Array[$i]=`echo ${values[$i]}`
 done
 
 echo "Array values :" ${Array[@]}
+
+sorted=$(printf "%s\n" "${Array[@]}" | sort -n )
+
+echo "Ascending Order :" $sorted
