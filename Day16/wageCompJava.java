@@ -7,16 +7,18 @@ static int dayHour=8;
 static int dailyWageFull=0;
 static int dailyWagePart=0;
 
-	public static void main(String[] args)
+public static void main(String[] args)
 	{
 		Random rand = new Random();
 		int random = rand.nextInt(100);
+		random=random%2;
 
-if(random>=70)
-	{
-		random = rand.nextInt(100);
-	if(random>=70)
-		{
+switch(random)
+{
+case 1:
+ random = rand.nextInt(100);
+   if(random>=70)
+      {
       System.out.println("Full Time Employee is Present");
       dailyWageFull=wageHourFull*dayHour;
       System.out.println("Employee wage(Per Day):" + dailyWageFull);
@@ -26,21 +28,26 @@ if(random>=70)
       System.out.println("Full Time Employee is Absent");
       System.out.println("Employee wage(Per Day):" + dailyWageFull);
       }
-	}
-else
-	{
-		random = rand.nextInt(100);
-	if(random<70)
-		{
-		System.out.println("Part Time Employee is Present");
-		dailyWagePart=wageHourPart*dayHour;
-		System.out.println("Employee wage(Per Day):" + dailyWagePart);
-		}
-	else
-		{
-		System.out.println("Full Time Employee is Absent");
-		System.out.println("Employee wage(Per Day):" + dailyWagePart);
-		}
-	}
+break;
+
+case 0:
+ random = rand.nextInt(100);
+   if(random<70)
+      {
+      System.out.println("Part Time Employee is Present");
+      dailyWagePart=wageHourPart*dayHour;
+      System.out.println("Employee wage(Per Day):" + dailyWagePart);
+      }
+   else
+      {
+      System.out.println("Part Time Employee is Absent");
+      System.out.println("Employee wage(Per Day):" + dailyWagePart);
+      }
+break;
+
+default:
+		System.out.println("Invalid");
+break;
+}
 	}
 }
