@@ -1,0 +1,3 @@
+#!/bin/bash -x
+
+grep -c DAVID data.csv
